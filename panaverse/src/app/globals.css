@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: #302c42 !important;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #666e75;
+  border-radius: 5px;
+}
+
+.vector {
+  background-image: url("../assets/Vector\ 1.png"),
+    url("../assets/Vector\ 3.png"), url("../assets/Vector\ 2.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: visible;
+}
+.vectorRight {
+  background-image: url("../assets/Vector\ 4.png");
+  background-repeat: no-repeat;
+  background-position: left;
+}
+.vector15 {
+  background-image: url("../assets/Vector\ 15.png");
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+}
+.vector14 {
+  background-image: url("../assets/Vector\ 14.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.carousel {
+  margin-right: 1px;
+}
+.react-multiple-carousel__arrow {
+  background: linear-gradient(
+    267.61deg,
+    #c0b7e8 -0.6%,
+    #8176af 98.31%
+  ) !important;
+}
+.react-multiple-carousel__arrow--left {
+  left: calc(0% + 1px) !important;
+}
+.react-multiple-carousel__arrow--right {
+  right: calc(1.7% + 1px) !important;
+}
+.outcome {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../assets/networking.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
