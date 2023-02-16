@@ -16,6 +16,7 @@ import logo from "../assets/logo.png";
 import vector from "../assets/Vector 20.png";
 import Link from "next/link";
 import { BsFacebook, BsGithub, BsTwitter, BsYoutube } from "react-icons/bs";
+import { Specializations } from "@/constant/Courses";
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 const Footer = () => {
@@ -35,24 +36,13 @@ const Footer = () => {
               fontWeight="300"
               className={montserrat.className}
             >
-              <ListItem>
-                <Link href="">Web 3.0 Metaverse Developer</Link>
-              </ListItem>
-              <ListItem>
-                <Link href="">Cloud native Computing</Link>
-              </ListItem>
-              <ListItem>
-                <Link href="">Artificial Intelligence</Link>
-              </ListItem>
-              <ListItem>
-                <Link href="">Internet of Things</Link>
-              </ListItem>
-              <ListItem>
-                <Link href="">Network Automation</Link>
-              </ListItem>
-              <ListItem>
-                <Link href="">Bio Information Technology</Link>
-              </ListItem>
+              {Specializations.map((currEle) => (
+                <List key={currEle.id}>
+                  <ListItem>
+                    <Link href={`/courses/${currEle.id}`}>{currEle.title}</Link>
+                  </ListItem>
+                </List>
+              ))}
             </OrderedList>
           </Box>
           <Image src={vector} alt="vector" width={0} />

@@ -16,7 +16,7 @@ import {
 import Image from "next/image";
 import logo from "../assets/logo.png";
 import Link from "next/link";
-import { Courses } from "@/constant/Courses";
+import { Specializations } from "@/constant/Courses";
 import { ChevronDownIcon, ChevronUpIcon } from "@chakra-ui/icons";
 const inter = Inter({ subsets: ["latin"] });
 
@@ -70,8 +70,12 @@ const Navbar = () => {
               background="linear-gradient(90deg, #8176AF 0%, #C0B7E8 100%)"
               border="transparent"
             >
-              {Courses.map((course) => (
-                <Link href={course.link} onClick={onToggle} key={course.id}>
+              {Specializations.map((course) => (
+                <Link
+                  href={`/courses/${course.id}`}
+                  onClick={onToggle}
+                  key={course.id}
+                >
                   <MenuItem
                     bg="transparent"
                     fontWeight="semibold"
