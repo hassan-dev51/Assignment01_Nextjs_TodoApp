@@ -30,10 +30,9 @@ const Navbar = () => {
         p="1rem 2rem 1rem 2rem"
         justify="space-between"
         align="center"
-        pos="fixed"
+        pos="sticky"
         w="100%"
         top="0px"
-        mb="2rem"
         style={{ backdropFilter: "blur(8px)" }}
       >
         <Link href={`/`}>
