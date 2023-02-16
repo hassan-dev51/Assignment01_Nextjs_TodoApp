@@ -31,7 +31,7 @@ const Navbar = () => {
         justify="space-between"
         align="center"
         pos="sticky"
-        top="0"
+        top="0px"
         style={{ backdropFilter: "blur(8px)" }}
       >
         <Link href={`/`}>
