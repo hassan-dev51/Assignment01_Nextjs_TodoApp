@@ -58,7 +58,7 @@ const CoreCourses = () => {
         <Text
           as="h2"
           color="white"
-          fontSize="36px"
+          fontSize={{ base: "26px", md: "36px", lg: "36px" }}
           fontWeight="700"
           fontStyle={"normal"}
           className={montserrat.className}
@@ -67,7 +67,7 @@ const CoreCourses = () => {
         </Text>
         <Text
           color="white"
-          fontSize="36px"
+          fontSize={{ base: "26px", md: "36px", lg: "36px" }}
           fontWeight="300"
           fontStyle={"normal"}
           lineHeight="44px"
@@ -88,6 +88,8 @@ const CoreCourses = () => {
         </Text>
         <Flex
           className="vector15"
+          flexDirection={{ base: "column", md: "column", lg: "row" }}
+          gap={{ base: "1rem", md: "1rem", lg: "" }}
           justify="space-between"
           align="center"
           mt="4rem"
@@ -97,14 +99,13 @@ const CoreCourses = () => {
               <Quarter text={currElem.id} />
             </Link>
           ))}
-          {/* <Link href={`/q2`}>
-            <Quarter text="02" />
-          </Link>
-          <Link href={`/q3`}>
-            <Quarter text="03" />
-          </Link> */}
         </Flex>
-        <Flex justify="space-between" align="center" mt="4rem">
+        <Flex
+          justify="space-between"
+          flexDirection={{ base: "column", md: "column", lg: "row" }}
+          align={{ base: "flex-start", md: "flex-start", lg: "center" }}
+          mt="4rem"
+        >
           {quarters.map((quarter) => (
             <Flex flexDirection="column" key={quarter.id}>
               <Flex justify="flex-start" align="center">

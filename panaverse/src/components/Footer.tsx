@@ -23,11 +23,15 @@ const Footer = () => {
   return (
     <>
       <Box mx="2rem" my="4rem">
-        <Flex justify="space-around" align="center">
+        <Flex
+          justify="space-around"
+          align="center"
+          flexDirection={{ base: "column", md: "column", lg: "row" }}
+        >
           <Box>
             <Image src={logo} alt="logo" height={150} />
           </Box>
-          <Image src={vector} alt="vector" width={0} />
+          <Image src={vector} alt="vector" width={0} className="vector-res" />
           <Box>
             <OrderedList
               gap={4}
@@ -38,14 +42,14 @@ const Footer = () => {
             >
               {Specializations.map((currEle) => (
                 <List key={currEle.id}>
-                  <ListItem>
+                  <ListItem mb={{ base: "1rem", md: "1rem", lg: "0rem" }}>
                     <Link href={`/courses/${currEle.id}`}>{currEle.title}</Link>
                   </ListItem>
                 </List>
               ))}
             </OrderedList>
           </Box>
-          <Image src={vector} alt="vector" width={0} />
+          <Image src={vector} alt="vector" width={0} className="vector-res" />
           <Box>
             <Text
               color="white"

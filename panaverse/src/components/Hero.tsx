@@ -17,6 +17,7 @@ const Hero = () => {
         as="div"
         p="0rem 2rem 0rem 2rem"
         display={`flex`}
+        flexDirection={{ base: "column", md: "column", lg: "row" }}
         mt="4rem"
         className="vectorRight"
       >
@@ -25,20 +26,25 @@ const Hero = () => {
           justify={`space-between`}
           p="1rem"
           flexDirection={"column"}
-          w="50%"
+          width={{ base: "100%", md: "100%", lg: "50%" }}
         >
           <Heading>
             <Text
               bgGradient="linear-gradient(91.57deg, #C0B7E8 -1.02%, #8176AF 36.25%)"
               bgClip="text"
               text-fill-color="transparent"
-              fontSize="46px"
+              fontSize={{ base: "26px", md: "36px", lg: "46px" }}
               fontWeight="700px"
             >
               Certified Web 3.0 and Metaverse Developer
             </Text>
           </Heading>
-          <Text fontSize="1rem" color="#ffff" fontWeight="400">
+          <Text
+            fontSize={{ md: "14px", lg: "1rem" }}
+            mt={{ base: "1rem", md: "1rem", lg: "1rem" }}
+            color="#ffff"
+            fontWeight="400"
+          >
             A One and Quarter Years Panaverse DAO Earn as you Learn Program
             Getting Ready for the Next Generation of the Internet Consolidating
             Web 3.0, Metaverse, Artificial Intelligence (AI), Cloud, Edge,
@@ -68,21 +74,32 @@ const Hero = () => {
             <Image src={arrow} alt="arrow" width={100} />
           </Flex>
         </Flex>
-        <Flex w="50%" justify="center" className="vector">
+        <Flex
+          width={{ base: "100%", md: "100%", lg: "50%" }}
+          justify="center"
+          className="vector"
+        >
           <Image src={mask} alt="header-image" />
         </Flex>
       </Box>
       <Flex
         bg="radial-gradient(50% 2900.76% at 50% 53.89%, rgba(58, 52, 86, 0.95) 0%, #211E2E 100%)"
         box-shadow="0px 4px 4px rgba(192, 183, 232, 0.01)"
+        flexDirection={{ base: "column", md: "column", lg: "row" }}
         justify="space-around"
+        align={{ base: "start", md: "start", lg: "center" }}
+        gap={{ base: "12px", md: "12px", lg: "0px" }}
         borderRadius="90px"
         m="4rem 2rem 2rem 2rem "
         p="2rem"
         className={montserrat.className}
       >
         {heroRectangle.map((item) => (
-          <Flex justify="space-evenly" align="center" key={item.id}>
+          <Flex
+            justify="space-evenly"
+            align={{ base: "start", md: "start", lg: "center" }}
+            key={item.id}
+          >
             <Image
               src={item.image}
               alt="location-icon"
@@ -105,7 +122,7 @@ const Hero = () => {
         <Text
           as="h2"
           color="white"
-          fontSize="36px"
+          fontSize={{ base: "26px", md: "36px", lg: "36px" }}
           fontWeight="700"
           fontStyle={"normal"}
           className={montserrat.className}
@@ -114,7 +131,7 @@ const Hero = () => {
         </Text>
         <Text
           color="white"
-          fontSize="36px"
+          fontSize={{ base: "26px", md: "36px", lg: "36px" }}
           fontWeight="300"
           fontStyle={"normal"}
           lineHeight="44px"
@@ -140,7 +157,7 @@ const Hero = () => {
         <Text
           as="h2"
           color="white"
-          fontSize="36px"
+          fontSize={{ base: "26px", md: "36px", lg: "36px" }}
           fontWeight="700"
           fontStyle={"normal"}
           className={montserrat.className}

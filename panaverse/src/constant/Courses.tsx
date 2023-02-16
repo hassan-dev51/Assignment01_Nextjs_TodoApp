@@ -412,12 +412,13 @@ export const Specializations = [
     ],
     module2:
       "Building Next-Gen Intelligent Apps with OpenAI’s Powerful Models We will cover GPT-4, ChatGPT, etc. and Next.js 13",
-    module2Link: [
+    module2Links: [
       {
         id: 1,
         link: "https://towardsdatascience.com/gpt-4-is-coming-soon-heres-what-we-know-about-it-64db058cfd45",
       },
     ],
+
     module3: "Python Crash Course  for TypeScript Developers",
     module3Links: [
       {
@@ -471,7 +472,7 @@ export const Specializations = [
       },
     ],
     module2: "Cloud Development Kit for Kubernetes",
-    module2Link: [
+    module2Links: [
       {
         id: 1,
         link: "https://cdk8s.io/",
@@ -500,7 +501,7 @@ export const Specializations = [
       },
     ],
     module2: "Alexa with Matter Protocol",
-    module2Link: [
+    module2Links: [
       {
         id: 1,
         link: "https://developer.amazon.com/en-US/alexa/matter",
@@ -598,7 +599,7 @@ export const Specializations = [
     ],
     projectPart1: "Project Part 1",
     projectPart1Title: "How to Launch a IEO on Binance Launchpad",
-    projectPartLink: [
+    projectPart1Link: [
       {
         id: 1,
         title: "Read How to Launch an IEO ",

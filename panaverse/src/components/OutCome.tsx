@@ -13,16 +13,20 @@ const OutCome = () => {
     <>
       <Box mx="2rem" mt="4rem">
         <Box
-          h={303}
-          borderRadius="160px"
+          h={{ base: "auto", md: "auto", lg: "303px" }}
+          borderRadius={{ base: "10px", md: "10px", lg: "160px" }}
           className={`${montserrat.className} outcome`}
           display="flex"
           flexDirection={"column"}
           justifyContent="center"
           alignItems={"center"}
-          px="2rem"
+          p={"2rem"}
         >
-          <Text color="white" fontSize="36px" fontWeight="700">
+          <Text
+            color="white"
+            fontSize={{ base: "26px", md: "26px", lg: "36px" }}
+            fontWeight="700"
+          >
             The Outcome for Participants of the Program
           </Text>
           <Text color="white" fontSize="16px" fontWeight="400">

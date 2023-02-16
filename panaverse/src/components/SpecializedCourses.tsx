@@ -190,35 +190,6 @@ const SpecializedCourses = () => {
               id={subject.id}
             />
           ))}
-          {/* <CarouselComponent
-            image={wmd}
-            title="Web 3.0 (Blockchain) and Metaverse Specialization"
-            des=""
-          />
-          <CarouselComponent
-            image={ai}
-            title=""
-          />
-          <CarouselComponent
-            image={cnc}
-            title="Cloud-Native Computing Specialization"
-            des=""
-          />
-          <CarouselComponent
-            image={iot}
-            sub="Ambient Computing and IoT Specialization"
-            des=""
-          />
-          <CarouselComponent
-            image={bio}
-            sub="Genomics and Bioinformatics Specialization"
-            des=""
-          />
-          <CarouselComponent
-            image={networking}
-            sub="Network Programmability and Automation Specialization"
-            des=""
-          /> */}
         </Carousel>
       </Box>
     </>

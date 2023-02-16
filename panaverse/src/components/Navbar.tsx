@@ -26,7 +26,7 @@ const Navbar = () => {
     <>
       <Flex
         background="rgba(255,255,255,0.25)"
-        zIndex={10}
+        zIndex={9999}
         p="1rem 2rem 1rem 2rem"
         justify="space-between"
         align="center"
@@ -38,13 +38,6 @@ const Navbar = () => {
           <Image src={logo} alt="logo" width={100} />
         </Link>
         <Box>
-          <Link
-            href={`about`}
-            className={inter.className}
-            style={{ color: "#ffff", fontSize: "1rem", fontWeight: "500" }}
-          >
-            About
-          </Link>
           <Menu isOpen={isOpen}>
             <MenuButton
               ml="2rem"
