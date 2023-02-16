@@ -12,7 +12,7 @@ const montserrat = Montserrat({ subsets: ["latin"] });
 
 const Hero = () => {
   return (
-    <>
+    <Box pos="relative">
       <Box
         as="div"
         p="0rem 2rem 0rem 2rem"
@@ -190,7 +190,7 @@ const Hero = () => {
           </Text>
         </Box>
       </Box>
-    </>
+    </Box>
   );
 };
 
