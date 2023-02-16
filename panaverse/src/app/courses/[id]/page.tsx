@@ -12,7 +12,13 @@ const SpecializationsPage = ({ params }: { params: { id: string } }) => {
     <>
       {individualCourse.map((item) => (
         <Box key={item.id}>
+          <Text>{item.title}</Text>
+          <Text>{item.quarter}</Text>
           <Text>{item.content}</Text>
+          <Text>{item.duration}</Text>
+          <Text>{item.courseDescription}</Text>
+          <Text>{item.coursePara}</Text>
+          <Text>{item.courseOutline}</Text>
         </Box>
       ))}
     </>

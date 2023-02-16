@@ -3,23 +3,19 @@ import React from "react";
 import { Montserrat } from "@next/font/google";
 import { Box, Flex, Text } from "@chakra-ui/react";
 
-import wmd from "../assets/wmd.png";
-import ai from "../assets/ai.jpg";
-import cnc from "../assets/cnc.jpg";
-import iot from "../assets/iot.jpg";
-import bio from "../assets/bio.jpg";
-import networking from "../assets/networking.jpg";
 import vector from "../assets/Vector 10.png";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import Link from "next/link";
+import { Specializations } from "@/constant/Courses";
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 const CarouselComponent = (props: {
-  image: StaticImageData;
+  image: string;
   des: string;
-  sub: string;
+  title: string;
+  id: string;
 }) => {
   return (
     <Flex
@@ -54,9 +50,10 @@ const CarouselComponent = (props: {
         >
           <Image
             src={props.image}
-            alt={props.sub}
-            placeholder="blur"
-            style={{ borderRadius: "50%", width: "100%", height: "100%" }}
+            alt={props.title}
+            width={200}
+            height={200}
+            style={{ borderRadius: "50%" }}
           />
         </Box>
       </Box>
@@ -67,7 +64,7 @@ const CarouselComponent = (props: {
         fontStyle={"normal"}
         textAlign="center"
       >
-        {props.sub}
+        {props.title}
       </Text>
       <Image src={vector} alt="line" width={154} />
       <Text
@@ -79,7 +76,8 @@ const CarouselComponent = (props: {
       >
         {props.des}
       </Text>
-      <Link href="https://www.panaverse.co" target="_blank">
+
+      <Link href={`/courses/${props.id}`}>
         <Text
           p="12px"
           borderRadius={40}
@@ -183,40 +181,44 @@ const SpecializedCourses = () => {
           slidesToSlide={2}
           swipeable
         >
-          <CarouselComponent
+          {Specializations.map((subject) => (
+            <CarouselComponent
+              key={subject.id}
+              image={subject.image}
+              des={subject.des}
+              title={subject.title}
+              id={subject.id}
+            />
+          ))}
+          {/* <CarouselComponent
             image={wmd}
-            sub="Web 3.0 (Blockchain) and Metaverse Specialization"
-            des="This Web 3.0 and Metaverse specialization focuses on developing
-            full-stack Web 3.0 and Metaverse experiences for the next generation of
-            the internet by specializing in building worlds that merge the best of
-            cutting-edge decentralized distributed blockchains with 3D metaverse
-            client experiences."
+            title="Web 3.0 (Blockchain) and Metaverse Specialization"
+            des=""
           />
           <CarouselComponent
             image={ai}
-            sub="Artificial Intelligence (AI) and Deep Learning Specialization"
-            des="The AI and Deep Learning specialization focuses on building and deploying intelligent APIs using OpenAI models and building custom Deep Learning Tensorflow models."
+            title=""
           />
           <CarouselComponent
             image={cnc}
-            sub="Cloud-Native Computing Specialization"
-            des="The Cloud-Native Computing Specialization focuses on Containers, Kubernetes, and CDK for Kubernetes."
+            title="Cloud-Native Computing Specialization"
+            des=""
           />
           <CarouselComponent
             image={iot}
             sub="Ambient Computing and IoT Specialization"
-            des="The Ambient Computing and IoT Specialization focuses on building Smart Homes, Offices, Factories, and Cities using Voice computing, Matter Protocol, and Embedded Devices."
+            des=""
           />
           <CarouselComponent
             image={bio}
             sub="Genomics and Bioinformatics Specialization"
-            des="Genomics is the study of the total genetic makeup of individual organisms, and how this genetic information is structured, functions, and has evolved; bioinformatics encompasses a diverse range of analytical methods and tools applied to genomic data. This Specialization focuses on performing complex bioinformatics analysis using the most essential Python libraries and applications."
+            des=""
           />
           <CarouselComponent
             image={networking}
             sub="Network Programmability and Automation Specialization"
-            des="More than ever, network engineers are finding it challenging to complete their duties entirely manually. Network automation is now crucial due to new protocols, technologies, delivery models, and the requirement for enterprises to become more adaptable and agile. This course teaches network engineers how to automate systems with code using a variety of technologies and tools, including Linux, Python, APIs, and Git."
-          />
+            des=""
+          /> */}
         </Carousel>
       </Box>
     </>
