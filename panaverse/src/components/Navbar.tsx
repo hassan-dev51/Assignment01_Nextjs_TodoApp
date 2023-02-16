@@ -31,6 +31,7 @@ const Navbar = () => {
         justify="space-between"
         align="center"
         pos="sticky"
+        w="100%"
         top="0px"
         style={{ backdropFilter: "blur(8px)" }}
       >
