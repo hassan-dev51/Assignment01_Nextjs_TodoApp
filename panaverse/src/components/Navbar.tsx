@@ -32,8 +32,7 @@ const Navbar = () => {
         align="center"
         pos="fixed"
         w="100%"
-        top="0px"
-        bottom="0px"
+        top="0"
         style={{ backdropFilter: "blur(8px)" }}
       >
         <Link href={`/`}>
